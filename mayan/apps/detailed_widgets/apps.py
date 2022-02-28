@@ -62,8 +62,8 @@ class DetailedWidgetApp(MayanAppConfig):
         dashboard_main.add_widget(detailed_widget_recent_changed_documents, order=2)
         dashboard_main.add_widget(detailed_widget_favourite_document, order=3)
 
-        for displayed in DashboardDisplayedTag.objects.all():
-            add_tag_to_dashboard(displayed.tag, order=4)
+        # for displayed in DashboardDisplayedTag.objects.all():
+        #     add_tag_to_dashboard(displayed.tag, order=4)
 
         menu_object.bind_links(
             links=(link_dashboard_remove_tag, link_dashboard_add_tag), sources=(Tag,)

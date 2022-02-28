@@ -11,7 +11,10 @@ from stronghold.decorators import public
 from documents.models import DocumentVersion, Document
 from documents.views import DocumentPreviewView
 from c4csap.views import RedirectToPageView
-from urllib import parse
+try:
+    from urllib import parse
+except ImportError:
+    from urlparse import urlparse as parse
 from .forms import DocumentEmbbedViewForm
 
 
